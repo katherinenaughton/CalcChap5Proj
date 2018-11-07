@@ -14,15 +14,18 @@ print(funclist)
 length=len(funclist)
 print(length)
 
-func2=lamda x : function
-print(func2)
+func2 = lambda x: (2*x)-3
+for x in range(a, (b+1)): 
+    print(func2(x))
 
 #for r in 
+'''
 ycoord=[]
 for x in range(a, (b+1)):
     print (function)
 
 #linearization= lamba a: f(a)+ fp(a)(x-a)
 #for x in range(a,(b+1)):
+'''
     
     
