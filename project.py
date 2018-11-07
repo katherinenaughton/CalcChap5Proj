@@ -4,7 +4,8 @@ Katie Naughton and Ella Edmonds
 '''
 
 function=input("What function would you like to analyze?")
-interval=input("What interval do you want your function to be on?")
+interval_a=input("Where do you want your interval to start?")
+interval_b=input("Where do you want your interval to end?")
 
-for 
-derivative= lamda f : (function(a+h) -function(a))/h
+for x in range(interval_a, interval_b:
+    derivative= lamda f : (function(a+h) -function(a))/h
