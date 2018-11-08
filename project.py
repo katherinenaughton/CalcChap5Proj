@@ -2,23 +2,23 @@
 project.py
 Katie Naughton and Ella Edmonds
 '''
-
-function=input("What function would you like to analyze? ")
+import math
+func1=input("What function would you like to analyze? ")
 a=int(input("Where do you want your interval to start? "))
 b=int(input("Where do you want your interval to end? "))
 
-print(function)
-funclist=list(function)
-print(funclist)
+print(func1)
+funclist=list(func1)
+print(func1)
 
 length=len(funclist)
 print(length)
 
-func2 = lambda x: (2*x)-3
+ycoord = lambda x: func1
 for x in range(a, (b+1)): 
-    print(func2(x))
+    print(ycoord(x))
 
-#for r in 
+#for r in c
 '''
 ycoord=[]
 for x in range(a, (b+1)):
