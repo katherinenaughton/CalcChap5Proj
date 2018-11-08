@@ -2,41 +2,35 @@
 project.py
 Katie Naughton and Ella Edmonds
 '''
+#eval, with x predefined
+
+#def square(x):
+    #return x*x
+    #result=square(5)
 import math
 function=input("What function would you like to analyze? ")
 a=int(input("Where do you want your interval to start? "))
 b=int(input("Where do you want your interval to end? "))
 
 print(function)
-funclist=list(function)
-print(funclist)
 
-length=len(funclist)
-print(length)
+def ycoord(x):
+    return eval(function)
+    result=ycooord(5)
 
-lamda=lambda x:
-ycoordlist = []
-for x in funclist:
-    ycoordlist.append(x)
-print(ycoordlist)
-    
-output=""
-for y in ycoordlist:
-    output += y + " "
-print(output)
-
-for r in range (a, (b+1)):
-    ycoord=lambda r: output
-    print(ycoord(r))
-    
-#for r in c
-'''
-ycoord=[]
+ycoordlist=[]
 for x in range(a, (b+1)):
-    print (function)
+    result=ycoord(x)
+    ycoordlist.append(result)
+    
+print(ycoordlist)
 
-#linearization= lamba a: f(a)+ fp(a)(x-a)
-#for x in range(a,(b+1)):
-'''
+
+    
+
+
+
+
+
     
     
