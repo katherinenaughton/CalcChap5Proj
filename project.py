@@ -26,8 +26,8 @@ for y in ycoordlist:
 print(output)
 
 for r in range (a, (b+1)):
-    ycoord=lambda x: output
-    print(ycoord(x))
+    ycoord=lambda r: output
+    print(ycoord(r))
     
 #for r in c
 '''
