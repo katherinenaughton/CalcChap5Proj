@@ -3,21 +3,32 @@ project.py
 Katie Naughton and Ella Edmonds
 '''
 import math
-func1=input("What function would you like to analyze? ")
+function=input("What function would you like to analyze? ")
 a=int(input("Where do you want your interval to start? "))
 b=int(input("Where do you want your interval to end? "))
 
-print(func1)
-funclist=list(func1)
-print(func1)
+print(function)
+funclist=list(function)
+print(funclist)
 
 length=len(funclist)
 print(length)
 
-ycoord = lambda x: func1
-for x in range(a, (b+1)): 
-    print(ycoord(x))
+lamda=lambda x:
+ycoordlist = []
+for x in funclist:
+    ycoordlist.append(x)
+print(ycoordlist)
+    
+output=""
+for y in ycoordlist:
+    output += y + " "
+print(output)
 
+for r in range (a, (b+1)):
+    ycoord=lambda x: output
+    print(ycoord(x))
+    
 #for r in c
 '''
 ycoord=[]
