@@ -58,8 +58,10 @@ steplist=len(interval1)
 
 derivlist=[]
 for s in steplist:
-    f1  = lambda a: (interval1[s]-interval2[s])/(2*step)
-    print(f1)
+    deriv  = (interval1[s]-interval2[s])/(2*step)
+    derivlist.append(deriv)
+
+print (derivlist)
 
 
 
