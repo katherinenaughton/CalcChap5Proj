@@ -17,14 +17,24 @@ step = float(input("What do you want the step to be? "))
 
 print(function)
 
-ycoordlist=[]
+ycoordlist1=[]
 for r in range(x1, (x2+1)):
-    x=r
+    x=r+0.01
     Locfunction=function.lower()
     y=eval(Locfunction)
-    ycoordlist.append(y)
+    ycoordlist1.append(y)
     
-print(ycoordlist)
+print(ycoordlist1)
+
+ycoordlist2=[]
+for r in range(x1, (x2+1)):
+    x=r-0.01
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlist2.append(y)
+    
+print(ycoordlist2)
+
 
 
 
@@ -49,12 +59,12 @@ for i in range(x1,(x2+1)):
 print(interval2)
 
 '''    
-intervalnum=len(ycoordlist)
+intervalnum=len(ycoordlist1)
 print(intervalnum)
 
 derivlist=[]
 for s in range(intervalnum):
-    deriv  = ((ycoordlist[s]+0.1)-(ycoordlist[s]-0.1))/(2*0.1)
+    deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.01)
     derivlist.append(deriv)
 
 print (derivlist)
