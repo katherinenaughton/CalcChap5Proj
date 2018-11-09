@@ -8,45 +8,44 @@ def square(x):
     result=square(5)
 print(square(5))
 '''
-
-
 import math
-function=input("What function would you like to analyze? ")
-a=int(input("Where do you want your interval to start? "))
-b=int(input("Where do you want your interval to end? "))
 
-x=x2
+function=input("What function would you like to analyze? ")
+x1=int(input("Where do you want your interval to start? "))
+x2=int(input("Where do you want your interval to end? "))
+step = float(input("what do you want the step to be? "))
+
 
 print(function)
 
-def ycoord(x2):
+'''
+x=xin
+
+def ycoord(xin):
     return eval(function)
-    result=ycoord(x2)
+    result=ycoord(xin)
  
 
 ycoordlist=[]
-for x in range(a, (b+1)):
-    
-    ycoordlist.append(result(x))
+for r in range(x1, (x2+1)):
+    ycoordlist.append(result(r))
     
 print(ycoordlist)
-
-equation = input("what equation would you like me to analize")
-x1 = int(input("on what interval? start value:"))
-x2 = int(input("on what interval? end value:"))
-step = input("what do you want the step to be")
+''' 
 
 #func = function(equation)
 
-interval = []
+interval1 = []
 
-for i in range(x1,x2+1):
+for i in range(x1,(x2+1)):
     if i == x2:
-        interval.append(i+.0)
+        interval.append(i)
     else:
-        for m in [.0,.1,.2,.3,.4,.5,.6,.7,.8,.9]:
-            #print(i+m)
-            interval.append(i+m)
+        interval.append(i+step)
+        
+print(interval)
+
+interval2= []
 
 '''f = []
 part = []
