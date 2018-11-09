@@ -36,29 +36,6 @@ for r in range(x1, (x2+1)):
 print(ycoordlist2)
 
 
-
-
-'''
-interval1 = []
-
-for i in range(x1,(x2+1)):
-    #if i == x2:
-        #interval1.append(i)
-    #else:
-    interval1.append(i+step)
-        
-print(interval1)
-
-interval2= []
-
-for i in range(x1,(x2+1)):
-    #if i == x2:
-        #interval2.append(i)
-    #else:
-    interval2.append(i-step)
-print(interval2)
-
-'''    
 intervalnum=len(ycoordlist1)
 print(intervalnum)
 
