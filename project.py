@@ -15,23 +15,23 @@ x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
 step = float(input("What do you want the step to be? "))
 
-
 print(function)
-
 '''
-x=xin
-
-def ycoord(xin):
-    return eval(function)
-    result=ycoord(xin)
- 
+def getValue(x):
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    return y
+'''
 
 ycoordlist=[]
 for r in range(x1, (x2+1)):
-    ycoordlist.append(result(r))
+    x=r
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlist.append(y)
     
 print(ycoordlist)
-''' 
+
 
 #func = function(equation)
 
