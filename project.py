@@ -16,12 +16,6 @@ x2=int(input("Where do you want your interval to end? "))
 step = float(input("What do you want the step to be? "))
 
 print(function)
-'''
-def getValue(x):
-    Locfunction=function.lower()
-    y=eval(Locfunction)
-    return y
-'''
 
 ycoordlist=[]
 for r in range(x1, (x2+1)):
@@ -33,8 +27,8 @@ for r in range(x1, (x2+1)):
 print(ycoordlist)
 
 
-#func = function(equation)
 
+'''
 interval1 = []
 
 for i in range(x1,(x2+1)):
@@ -53,14 +47,14 @@ for i in range(x1,(x2+1)):
     #else:
     interval2.append(i-step)
 print(interval2)
-    
+
+'''    
 steplist=len(interval1)
 print(steplist)
 
-
 derivlist=[]
 for s in range(steplist):
-    deriv  = (interval1[s]-interval2[s])/(2*step)
+    deriv  = ((ycoordlist[s]+0.1)-(ycoordlist[s]-0.1))/(2*0.1)
     derivlist.append(deriv)
 
 print (derivlist)
