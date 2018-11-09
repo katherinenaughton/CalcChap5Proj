@@ -54,10 +54,12 @@ for i in range(x1,(x2+1)):
         interval2.append(i-step)
 print(interval2)
     
-steplist=len(interval1)  
+steplist=len(interval1)
+print(steplist)
+
 
 derivlist=[]
-for s in steplist:
+for s in range(steplist):
     deriv  = (interval1[s]-interval2[s])/(2*step)
     derivlist.append(deriv)
 
