@@ -39,27 +39,28 @@ interval1 = []
 
 for i in range(x1,(x2+1)):
     if i == x2:
-        interval.append(i)
+        interval1.append(i)
     else:
-        interval.append(i+step)
+        interval1.append(i+step)
         
-print(interval)
+print(interval1)
 
 interval2= []
 
-'''f = []
-part = []
-for m in equation:
-    if m != "+" or "-":
-        part.append(m)
-    elif m == "-" or m == ":
-        f.append(part)
-        part = []'''
+for i in range(x1,(x2+1)):
+    if i == x2:
+        interval2.append(i)
+    else:
+        interval2.append(i-step)
+print(interval2)
+    
+steplist=len(interval1)  
 
-f1  = lambda a: ((a+.01)-(a-.01))/(2*.01)
+derivlist=[]
+for s in steplist:
+    f1  = lambda a: (interval1[s]-interval2[s])/(2*step)
+    print(f1)
 
-for m in interval:
-    print(f1(m))
 
 
     
