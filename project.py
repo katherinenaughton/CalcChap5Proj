@@ -13,7 +13,7 @@ import math
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
-step = float(input("what do you want the step to be? "))
+step = float(input("What do you want the step to be? "))
 
 
 print(function)
@@ -38,20 +38,20 @@ print(ycoordlist)
 interval1 = []
 
 for i in range(x1,(x2+1)):
-    if i == x2:
-        interval1.append(i)
-    else:
-        interval1.append(i+step)
+    #if i == x2:
+        #interval1.append(i)
+    #else:
+    interval1.append(i+step)
         
 print(interval1)
 
 interval2= []
 
 for i in range(x1,(x2+1)):
-    if i == x2:
-        interval2.append(i)
-    else:
-        interval2.append(i-step)
+    #if i == x2:
+        #interval2.append(i)
+    #else:
+    interval2.append(i-step)
 print(interval2)
     
 steplist=len(interval1)
