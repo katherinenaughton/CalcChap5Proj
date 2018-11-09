@@ -49,11 +49,11 @@ for i in range(x1,(x2+1)):
 print(interval2)
 
 '''    
-steplist=len(interval1)
-print(steplist)
+intervalnum=len(ycoordlist)
+print(intervalnum)
 
 derivlist=[]
-for s in range(steplist):
+for s in range(intervalnum):
     deriv  = ((ycoordlist[s]+0.1)-(ycoordlist[s]-0.1))/(2*0.1)
     derivlist.append(deriv)
 
