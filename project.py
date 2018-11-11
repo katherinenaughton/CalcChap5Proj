@@ -105,7 +105,7 @@ for d in derivlist:
 
 y2coordlist2=[]
 for d in derivlist:
-    y2coordlist2.append(d-0,001)
+    y2coordlist2.append(d-0.001)
 
 interval2num=len(y2coordlist1)
 print(interval2num)
@@ -117,7 +117,7 @@ for d in range(interval2num):
     deriv2list.append(deriv)
 print (deriv2list)
 
-secondderivlist=list(zip(xoordlist, derivlist, deriv2list))
+secondderivlist=list(zip(xcoordlist, derivlist, deriv2list))
 print(secondderivlist)
 
 # points of inflection
