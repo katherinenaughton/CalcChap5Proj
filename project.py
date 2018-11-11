@@ -7,6 +7,9 @@ def square(x):
     return x*x
     result=square(5)
 print(square(5))
+
+TO DO: 
+have figure out how to tell if extrema is abs/local or max/min
 '''
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
@@ -68,15 +71,28 @@ print(xyderivzip)
 
 # extrema
 extremalist=[]
-
 for d in xyderivzip:
    if d[2]==0:
     extremalist.append((d[0], d[1]))
 print (extremalist)
 
-# increasing intervals
+# increasing interval(s)
+increasinglist=[]
+for d in xyderivzip:
+    if d[2]>0:
+        increasinglist.append(d[0])
+print (increasing list)
 
-# decreasing intervals
+#decreasing interval(s)
+decreasinglist=[]
+for d in xyderivzip:
+    if d[2]<0:
+        decreasinglist.append(d[0])
+print (increasing list)
+        
+
+
+
 
 # points of inflection
 
