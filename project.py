@@ -12,14 +12,30 @@ from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
 
+#inputs
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
 #step = float(input("What do you want the step to be? "))
 
+#function
 print(function)
 
+#x values
+xcoordlist=[]
+for r in range(x1,(x2+1)):
+    xcoordlist.append(r)
+print(xcoordlist)
+    
 # y values
+ycoordlist=[]
+for r in range(x1, (x2+1)):
+    x=r
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlist.append(y)
+print(ycoordlist)
+
 ycoordlist1=[]
 for r in range(x1, (x2+1)):
     x=r+0.001
@@ -46,8 +62,17 @@ for s in range(intervalnum):
     derivlist.append(deriv)
 print (derivlist)
 
-# extrema
+#deriv/x value/y value zip
+xyderivsip=list(zip(xcoordlist, ycoordlist, derivlist))
+print(xyderivzip)
 
+# extrema
+extremalist=[]
+
+for d in xyderivzip:
+   if d[2]==0:
+    extremalist.append((d[1], d[2]))
+print (extremalist)
 # increasing intervals
 
 # decreasing intervals
