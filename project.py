@@ -8,7 +8,9 @@ def square(x):
     result=square(5)
 print(square(5))
 '''
-import math
+from math import sin,cos, tan, acos, asin, atan
+from math import exp, expm1, e, pi
+from math import log, log10, sqrt, log2
 
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
@@ -19,7 +21,7 @@ print(function)
 
 ycoordlist1=[]
 for r in range(x1, (x2+1)):
-    x=r+0.01
+    x=r+0.001
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlist1.append(y)
@@ -28,7 +30,7 @@ print(ycoordlist1)
 
 ycoordlist2=[]
 for r in range(x1, (x2+1)):
-    x=r-0.01
+    x=r-0.001
     Locfunction=function.lower()
     y=eval(Locfunction)
     ycoordlist2.append(y)
