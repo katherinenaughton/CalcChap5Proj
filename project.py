@@ -10,6 +10,7 @@ print(square(5))
 
 TO DO: 
 have figure out how to tell if extrema is abs/local or max/min
+have to figure our when decreasing or increasing interval is a union
 '''
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
@@ -79,17 +80,21 @@ print (extremalist)
 # increasing interval(s)
 increasinglist=[]
 for d in xyderivzip:
-    if d[2]>0:
+    if d[2]>=0:
         increasinglist.append(d[0])
-print (increasing list)
+print (increasinglist)
+lengthincreasing=len(increasinglist)
+print(lengthincreasing)
+#print('Your function is increasing from' increasinglist[0] 'to' increasinglist[lengthincreasing])
 
 #decreasing interval(s)
 decreasinglist=[]
 for d in xyderivzip:
-    if d[2]<0:
+    if d[2]<=0:
         decreasinglist.append(d[0])
-print (increasing list)
-        
+print (decreasinglist)
+lengthdecreasing=len(decreasinglist)
+#print('Your function is decreasing from' decreasinglist[0] 'to' decreasinglist[lengthdecreasing])
 
 
 
