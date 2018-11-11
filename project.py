@@ -63,7 +63,7 @@ for s in range(intervalnum):
 print (derivlist)
 
 #deriv/x value/y value zip
-xyderivsip=list(zip(xcoordlist, ycoordlist, derivlist))
+xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist))
 print(xyderivzip)
 
 # extrema
@@ -71,8 +71,9 @@ extremalist=[]
 
 for d in xyderivzip:
    if d[2]==0:
-    extremalist.append((d[1], d[2]))
+    extremalist.append((d[0], d[1]))
 print (extremalist)
+
 # increasing intervals
 
 # decreasing intervals
