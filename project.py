@@ -84,9 +84,10 @@ for d in xyderivzip:
     if d[2]>=0:
         increasinglist.append(d[0])
 print (increasinglist)
-lengthincreasing=len(increasinglist)
-print(lengthincreasing)
-#print('Your function is increasing from' increasinglist[0] 'to' increasinglist[lengthincreasing])
+
+reverseincreasinglist=increasinglist[::-1]
+print(reversedincreasinglist)
+print('Your function is increasing from' increasinglist[0] 'to' reverseincreasinglist[0])
 
 #decreasing interval(s)
 decreasinglist=[]
@@ -94,8 +95,10 @@ for d in xyderivzip:
     if d[2]<=0:
         decreasinglist.append(d[0])
 print (decreasinglist)
-lengthdecreasing=len(decreasinglist)
-#print('Your function is decreasing from' decreasinglist[0] 'to' decreasinglist[lengthdecreasing])
+
+reversedecreasinglist=decreasinglist[::-1]
+print(reversedecreasinglist)
+print('Your function is decreasing from' decreasinglist[0] 'to' reversedecreasinglist[0])
 
 #second derivatives
 y2coordlist1=[]
