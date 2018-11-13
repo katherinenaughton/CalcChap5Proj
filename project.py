@@ -61,8 +61,8 @@ print(intervalnum)
 
 # derivatives
 derivlist=[]
-for s in range(intervalnum):
-    deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.01)
+for r in range(intervalnum):
+    deriv = ((ycoordlist1[r])-(ycoordlist2[r]))/(2*0.001)
     derivlist.append(deriv)
 print (derivlist)
 
@@ -109,9 +109,9 @@ interval2num=len(y2coordlist1)
 print(interval2num)
 
 deriv2list=[]
-for d in range(interval2num):
-    deriv2  = ((y2coordlist1[d])-(y2coordlist2[d]))/(2*0.01)
-    deriv2list.append(deriv)
+for i in range(interval2num):
+    deriv2  = ((y2coordlist1[i])-(y2coordlist2[i]))/(2*0.001)
+    deriv2list.append(deriv2)
 print (deriv2list)
 
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
