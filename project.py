@@ -11,6 +11,7 @@ print(square(5))
 TO DO: 
 have figure out how to tell if extrema is abs/local or max/min
 have to figure our when decreasing or increasing interval is a union
+MAKE THE DERIVATIVES OF O INTEGERS
 '''
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
