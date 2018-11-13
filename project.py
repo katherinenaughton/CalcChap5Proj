@@ -85,8 +85,8 @@ for d in xyderivzip:
         increasinglist.append(d[0])
 print (increasinglist)
 
-reverseincreasinglist=increasinglist[::-1]
-print(reversedincreasinglist)
+reverseincreasinglist=(increasinglist[::-1])
+print(reverseincreasinglist)
 print('Your function is increasing from' increasinglist[0] 'to' reverseincreasinglist[0])
 
 #decreasing interval(s)
@@ -96,7 +96,7 @@ for d in xyderivzip:
         decreasinglist.append(d[0])
 print (decreasinglist)
 
-reversedecreasinglist=decreasinglist[::-1]
+reversedecreasinglist=(decreasinglist[::-1])
 print(reversedecreasinglist)
 print('Your function is decreasing from' decreasinglist[0] 'to' reversedecreasinglist[0])
 
