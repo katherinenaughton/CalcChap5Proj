@@ -97,12 +97,11 @@ lengthdecreasing=len(decreasinglist)
 #print('Your function is decreasing from' decreasinglist[0] 'to' decreasinglist[lengthdecreasing])
 
 
-#second derivative list 
+#second derivatives
 y2coordlist1=[]
 for d in derivlist:
     y2coordlist1.append(d+0.001)
     
-
 y2coordlist2=[]
 for d in derivlist:
     y2coordlist2.append(d-0.001)
@@ -110,22 +109,40 @@ for d in derivlist:
 interval2num=len(y2coordlist1)
 print(interval2num)
 
-#  second derivatives
 deriv2list=[]
 for d in range(interval2num):
     deriv2  = ((y2coordlist1[d])-(y2coordlist2[d]))/(2*0.01)
     deriv2list.append(deriv)
 print (deriv2list)
 
-secondderivlist=list(zip(xcoordlist, derivlist, deriv2list))
-print(secondderivlist)
+xyderiv2zip=list(zip(xcoordlist, derivlist, deriv2list))
+print(xyderiv2zip)
 
 # points of inflection
+poilist=[]
+for d in xyderiv2zip:
+   if d[2]==0:
+    poistlist.append((d[0], d[1]))
+print (poilist)
 
-# concave up intervals
+# concave up interval(s)
+concaveuplist=[]
+for d in xyderiv2zip:
+    if d[2]>=0:
+        concaveuplist.append(d[0])
+print (concaveuplist)
+lengthconcaveup=len(concaveuplist)
+print(lengthconcaveup)
+#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[lengthconcaveup])
 
-# concave down intervals
-
+#concave down interval(s)
+concavedownlist=[]
+for d in xyderiv2zip:
+    if d[2]<=0:
+        concavedownlist.append(d[0])
+print (concavedownlist)
+lengthconcavedown=len(concavedownlist)
+#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
 
     
 
