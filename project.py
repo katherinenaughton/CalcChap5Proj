@@ -74,7 +74,7 @@ intervalnum=len(ycoordlist1)                #this tells us how long our cordinat
 derivlist=[]                                #here we will make a list of the derivatives
 derivlist1=[]
 for s in range(intervalnum):
-    deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.01)
+    deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.001)
     derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
 #print (derivlist1)
@@ -188,7 +188,7 @@ ycoords= graphycoords
 
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
-    Sprite(points, ((100*(i[0]+2)),(100*(i[1]+2))))
+    Sprite(points, ((50*(i[0]+2)),(50*(i[1]+2))))
 
                                     #Defines coordinates to graph the original function and graph it.
 points = CircleAsset(5, thinline, purple)
@@ -197,7 +197,7 @@ x2coords = xcoordlist
 y2coords = graphy2coords
 xy2coords=list(zip(x2coords,y2coords))
 for i in xy2coords: 
-    Sprite(points, ((100*(i[0]+2)),(100*(i[1]+2))))
+    Sprite(points, ((50*(i[0]+2)),(50*(i[1]+2))))
 
 myapp = App()
 myapp.run()
