@@ -13,6 +13,8 @@ have to figure our when decreasing or increasing interval is a union
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
+from ggame import App, Color, LineStyle, Sprite
+from ggame import CircleAsset
 
 #inputs
 function=input("What function would you like to analyze? ")
@@ -178,7 +180,7 @@ xcoords = xcoordlist
 ycoords= ycoordlist
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
-    Sprite(points, (i[0],i[1]))
+    Sprite(points, (100+10*(i[0]),100+10*(i[1])))
 '''
 points = CircleAsset(5, thinline, purple)
 x2coords = xcoordlist
