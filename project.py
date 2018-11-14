@@ -10,22 +10,22 @@ TO DO:
 have figure out how to tell if extrema is abs/local or max/min
 have to figure our when decreasing or increasing interval is a union
 '''
-
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
-from ggame import App, Color, LineStyle, Sprite
-from ggame import CircleAsset
 
-                                            #Here is where the user inputs their function and interval
+#inputs
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
+#step = float(input("What do you want the step to be? "))
 
 
 print(function)
 
-
+if log10 or log or log2 in function:
+    if x1<0:
+        x1=0
 
 xcoordlist=[]                               #x values
 for i in range(x1,x2+1):
@@ -84,26 +84,29 @@ xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist1))
 
 
 extremalist=[]                              #here we find where d1 = 0
-for d in xyderivzip:
-   if d[2]==0:
-    extremalist.append((d[0], d[1]))
-print ('the first derivative of your equation is equal to zero at:',extremalist)
-
-
 increasinglist=[]                           #here we find the interval where it inc/dec
 decreasinglist=[]
 for d in xyderivzip:
+    if d[2]==0:
+        extremalist.append((d[0], d[1]))
     if d[2]>=0:
         increasinglist.append(d[0])
     elif d[2]<=0:
-        decreasinglist.append(d[0])         
-#print (increasinglist)
-#print (decreasinglist)
+        decreasinglist.append(d[0]) 
+print ('the first derivative of your equation is equal to zero at:',extremalist)
 lengthincreasing=len(increasinglist)
 lengthdecreasing=len(decreasinglist)
-print('Your function is increasing from',increasinglist[0],'to',increasinglist[-1])
-print('Your function is decreasing from',decreasinglist[0],'to',decreasinglist[-1])
 
+if lengthdecreasing == 0:
+    print('Your function is never decreasing')
+else:
+    print('Your function is decreasing from',decreasinglist[0],'to',decreasinglist[-1])
+    
+if lengthincreasing == 0:
+    print('Your function is never increasing')
+else:
+    print('Your function is increasing from',increasinglist[0],'to',increasinglist[-1])
+ 
 #work on the print statements above to make it work when it changes from increasing to decreasing more than once
 
 #second derivatives
@@ -124,8 +127,9 @@ for i in range(interval2num):
     deriv2list.append(round(deriv2,2))
 print (deriv2list)
 
-'''xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
+xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
 print(xyderiv2zip)
+
 # points of inflection
 poilist=[]
 concaveuplist=[]
@@ -140,6 +144,7 @@ for d in xyderiv2zip:
 print (poilist)
 print (concaveuplist)
 print (concavedownlist)
+
 # concave up interval(s)
 concaveuplist=[]
 for d in xyderiv2zip:
@@ -149,6 +154,7 @@ print (concaveuplist)
 lengthconcaveup=len(concaveuplist)
 print(lengthconcaveup)
 #print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[lengthconcaveup])
+
 #concave down interval(s)
 concavedownlist=[]
 for d in xyderiv2zip:
@@ -157,7 +163,7 @@ for d in xyderiv2zip:
 print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
-'''
+
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
