@@ -10,18 +10,21 @@ TO DO:
 have figure out how to tell if extrema is abs/local or max/min
 have to figure our when decreasing or increasing interval is a union
 '''
+
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
+from ggame import App, Color, LineStyle, Sprite
+from ggame import CircleAsset
 
-#inputs
+                                            #Here is where the user inputs their function and interval
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
-#step = float(input("What do you want the step to be? "))
 
 
 print(function)
+
 
 
 xcoordlist=[]                               #x values
@@ -155,7 +158,29 @@ print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
 '''
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+purple = Color(0x800080, 1.0)
+purple2 = Color(0x9932CC, 1.0)
 
+thinline = LineStyle(1, black)
+
+points = CircleAsset(5, thinline, blue)
+xcoords = xcoordlist
+ycoords= ycoordlist
+xycoords=list(zip(xcoords,ycoords))
+for i in xycoords: 
+    Sprite(points, (i[0],i[1]))
+'''
+points = CircleAsset(5, thinline, purple)
+x2coords = xcoordlist
+deriv2func = [Sprite(points, (x, 100*cos(radians(x))+100)) for x in x2coords]
+'''
+
+myapp = App()
+myapp.run()
 
 
     
