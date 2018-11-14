@@ -166,33 +166,38 @@ for d in xyderiv2zip:
 lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[-1])
 
-                                    #This is the cod for the graphs of the function and derivative.
+                                    #This is the code for the graphs of the function and derivative.
+                                    #Defines Colors
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
 black = Color(0x000000, 1.0)
 purple = Color(0x800080, 1.0)
 purple2 = Color(0x9932CC, 1.0)
-
+                                    #Defines the points that will plot the graph.
 thinline = LineStyle(1, black)
 points = CircleAsset(5, thinline, blue)
-
+                                    #Defines coordinates to graph the original function and graph it. 
 graphycoords=[y*-1 for y in ycoordlist]
 print(graphycoords)
 xcoords = xcoordlist
 ycoords= graphycoords
 
-print(xcoordlist)
-print(ycoordlist)
+#print(xcoordlist)
+#print(ycoordlist)
+
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
     Sprite(points, ((100*(i[0]+2)),(100*(i[1]+2))))
 
-'''
+                                    #Defines coordinates to graph the original function and graph it.
 points = CircleAsset(5, thinline, purple)
+graphy2coords=[y*-1 for y in derivlist]
 x2coords = xcoordlist
-deriv2func = [Sprite(points, (x, 100*cos(radians(x))+100)) for x in x2coords]
-'''
+y2coords = graphy2coords
+xy2coords=list(zip(x2coords,y2coords))
+for i in xy2coords: 
+    Sprite(points, ((100*(i[0]+2)),(100*(i[1]+2))))
 
 myapp = App()
 myapp.run()
