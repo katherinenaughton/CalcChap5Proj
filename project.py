@@ -17,11 +17,11 @@ from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
 
-#inputs
+                                            #Here is where the user inputs the functions and their interval
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
-#step = float(input("What do you want the step to be? "))
+
 
 #function
 print(function)
