@@ -20,10 +20,10 @@ from ggame import CircleAsset
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
-#step = float(input("What do you want the step to be? "))
 
 
-print(function)
+
+#print(function)
 
 if log10 or log or log2 in function:
     if x1<0:
@@ -68,7 +68,7 @@ for r in xcoordlist:
 
 
 intervalnum=len(ycoordlist1)                #this tells us how long our cordinate lists are 
-print(intervalnum)                              #so we know how long to run the loop
+#print(intervalnum)                              #so we know how long to run the loop
 
 
 derivlist=[]                                #here we will make a list of the derivatives
@@ -77,7 +77,7 @@ for s in range(intervalnum):
     deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.01)
     derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
-print (derivlist1)
+#print (derivlist1)
 
 
 #deriv/x value/y value zip
@@ -95,19 +95,19 @@ for d in xyderivzip:
         increasinglist.append(d[0])
     elif d[2]<=0:
         decreasinglist.append(d[0]) 
-print ('the first derivative of your equation is equal to zero at:',extremalist)
+#print ('the first derivative of your equation is equal to zero at:',extremalist)
 lengthincreasing=len(increasinglist)
 lengthdecreasing=len(decreasinglist)
 
 if lengthdecreasing == 0:
     print('Your function is never decreasing')
 else:
-    print('Your function is decreasing from',decreasinglist[0],'to',decreasinglist[-1])
+    #print('Your function is decreasing from',decreasinglist[0],'to',decreasinglist[-1])
     
 if lengthincreasing == 0:
     print('Your function is never increasing')
 else:
-    print('Your function is increasing from',increasinglist[0],'to',increasinglist[-1])
+    #print('Your function is increasing from',increasinglist[0],'to',increasinglist[-1])
  
 #work on the print statements above to make it work when it changes from increasing to decreasing more than once
 
@@ -121,16 +121,16 @@ for d in derivlist:
     y2coordlist2.append(d-0.001)
 
 interval2num=len(y2coordlist1)
-print(interval2num)
+#print(interval2num)
 
 deriv2list=[]
 for i in range(interval2num):
     deriv2  = ((y2coordlist1[i])-(y2coordlist2[i]))/(2*0.001)
     deriv2list.append(round(deriv2,2))
-print (deriv2list)
+#print (deriv2list)
 
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
-print(xyderiv2zip)
+#print(xyderiv2zip)
 
 # points of inflection
 poilist=[]
@@ -143,18 +143,18 @@ for d in xyderiv2zip:
         concaveuplist.append(d[0])
     elif d[3]<=0:
         concavedownlist.append(d[0])
-print (poilist)
-print (concaveuplist)
-print (concavedownlist)
+#print (poilist)
+#print (concaveuplist)
+#print (concavedownlist)
 
 # concave up interval(s)
 concaveuplist=[]
 for d in xyderiv2zip:
     if d[3]>=0:
         concaveuplist.append(d[0])
-print (concaveuplist)
+#print (concaveuplist)
 lengthconcaveup=len(concaveuplist)
-print(lengthconcaveup)
+#print(lengthconcaveup)
 #print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[-1])
 
 #concave down interval(s)
@@ -162,10 +162,11 @@ concavedownlist=[]
 for d in xyderiv2zip:
     if d[3]<=0:
         concavedownlist.append(d[0])
-print (concavedownlist)
+#print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[-1])
 
+                                    #This is the cod for the graphs of the function and derivative.
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
@@ -178,9 +179,13 @@ thinline = LineStyle(1, black)
 points = CircleAsset(5, thinline, blue)
 xcoords = xcoordlist
 ycoords= ycoordlist
+
+print(xcoordlist)
+print(ycoordlist)
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
-    Sprite(points, (100+10*(i[0]),100+10*(i[1])))
+    Sprite(points, (100*(i[0]),100*(i[1])))
+
 '''
 points = CircleAsset(5, thinline, purple)
 x2coords = xcoordlist
