@@ -26,11 +26,15 @@ x2=int(input("Where do you want your interval to end? "))
 #function
 print(function)
 
-#x values
-xcoordlist=[]
-for r in range(x1,(x2+1)):
-    xcoordlist.append(r)
-print(xcoordlist)
+xcoordlist=[]                               #x values
+for i in range(x1,x2+1):
+    if i == x2:
+        xcoordlist.append(i+.0)
+    else:
+        for m in [.0,.1,.2,.3,.4,.5,.6,.7,.8,.9]:
+            #print(i+m)
+            xcoordlist.append(i+m)
+#print(xcoordlist)
     
 # y values
 ycoordlist=[]
@@ -61,14 +65,16 @@ intervalnum=len(ycoordlist1)
 print(intervalnum)
 
 # derivatives
-derivlist=[]
-for r in range(intervalnum):
-    deriv = ((ycoordlist1[r])-(ycoordlist2[r]))/(2*0.001)
+derivlist=[]                                #here we will make a list of the derivatives
+derivlist1=[]
+for s in range(intervalnum):
+    deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.01)
+    derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
-print (derivlist)
+print (derivlist1)
 
 #deriv/x value/y value zip
-xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist))
+xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist1))
 print(xyderivzip)
 
 # extrema
@@ -87,7 +93,7 @@ print (increasinglist)
 
 reverseincreasinglist=(increasinglist[::-1])
 print(reverseincreasinglist)
-print('Your function is increasing from' increasinglist[0] 'to' reverseincreasinglist[0])
+print('Your function is increasing from', increasinglist[0], 'to', increasinglist[-1])
 
 #decreasing interval(s)
 decreasinglist=[]
@@ -98,7 +104,7 @@ print (decreasinglist)
 
 reversedecreasinglist=(decreasinglist[::-1])
 print(reversedecreasinglist)
-print('Your function is decreasing from' decreasinglist[0] 'to' reversedecreasinglist[0])
+print('Your function is decreasing from', decreasinglist[0], 'to', decreasinglist[-1])
 
 #second derivatives
 y2coordlist1=[]
@@ -136,7 +142,7 @@ for d in xyderiv2zip:
 print (concaveuplist)
 lengthconcaveup=len(concaveuplist)
 print(lengthconcaveup)
-#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[lengthconcaveup])
+print('Your function is concave up from', concaveuplist[0], 'to', concaveuplist[-1])
 
 #concave down interval(s)
 concavedownlist=[]
@@ -145,7 +151,7 @@ for d in xyderiv2zip:
         concavedownlist.append(d[0])
 print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
-#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
+print('Your function is concavedown from', concavedownlist[0], 'to', concavedownlist[-1])
 
     
 
