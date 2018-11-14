@@ -24,11 +24,11 @@ x2=int(input("Where do you want your interval to end? "))
 
 
 #print(function)
-
+'''
 if log10 or log or log2 in function:
     if x1<0:
         x1=0
-
+'''
 xcoordlist=[]                               #x values
 for i in range(x1,x2+1):
     if i == x2:
@@ -99,14 +99,14 @@ for d in xyderivzip:
 lengthincreasing=len(increasinglist)
 lengthdecreasing=len(decreasinglist)
 
-if lengthdecreasing == 0:
-    print('Your function is never decreasing')
-else:
+#if lengthdecreasing == 0:
+    #print('Your function is never decreasing')
+#else:
     #print('Your function is decreasing from',decreasinglist[0],'to',decreasinglist[-1])
     
-if lengthincreasing == 0:
-    print('Your function is never increasing')
-else:
+#if lengthincreasing == 0:
+    #print('Your function is never increasing')
+#else:
     #print('Your function is increasing from',increasinglist[0],'to',increasinglist[-1])
  
 #work on the print statements above to make it work when it changes from increasing to decreasing more than once
@@ -175,16 +175,18 @@ purple = Color(0x800080, 1.0)
 purple2 = Color(0x9932CC, 1.0)
 
 thinline = LineStyle(1, black)
-
 points = CircleAsset(5, thinline, blue)
+
+graphycoords=[y*-1 for y in ycoordlist]
+print(graphycoords)
 xcoords = xcoordlist
-ycoords= ycoordlist
+ycoords= graphycoords
 
 print(xcoordlist)
 print(ycoordlist)
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
-    Sprite(points, (100*(i[0]),100*(i[1])))
+    Sprite(points, ((100*(i[0]+2)),(100*(i[1]+2))))
 
 '''
 points = CircleAsset(5, thinline, purple)
