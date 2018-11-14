@@ -153,7 +153,7 @@ for d in xyderiv2zip:
 print (concaveuplist)
 lengthconcaveup=len(concaveuplist)
 print(lengthconcaveup)
-#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[lengthconcaveup])
+#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[-1])
 
 #concave down interval(s)
 concavedownlist=[]
@@ -162,7 +162,7 @@ for d in xyderiv2zip:
         concavedownlist.append(d[0])
 print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
-#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
+#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[-1])
 
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
