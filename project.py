@@ -17,9 +17,9 @@ from ggame import CircleAsset
 
                                             #This is where the user inputs the function and intervals. 
 function=input("What function would you like to analyze? ")
-
-x1=int(input("Where do you want your interval to start? Remember that your interval must be within the domain of the function:) "))
-x2=int(input("Where do you want your interval to end? Remember that your interval must be within the domain of the function:)"))
+print("If you chose a log function, make sure your interval is within the domain :)")
+x1=int(input("Where do you want your interval to start? "))
+x2=int(input("Where do you want your interval to end? "))
 
 '''
 try:
