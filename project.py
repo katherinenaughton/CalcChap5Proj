@@ -1,26 +1,22 @@
 '''
 project.py
 Katie Naughton and Ella Edmonds
-eval, with x predefined
-def square(x):
-    return x*x
-    result=square(5)
-print(square(5))
+
 TO DO: 
 have figure out how to tell if extrema is abs/local or max/min
 have to figure our when decreasing or increasing interval is a union
+deals with logs 1/x graphs
 '''
-from math import sin,cos, tan, acos, asin, atan
+from math import sin, cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
 
-#inputs
+                                            #inputs
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
-
 
 
 #print(function)
