@@ -41,7 +41,9 @@ for r in xcoordlist:
     Locfunction=function.lower()
     try:
         y=eval(Locfunction)
+
         ycoordlist.append(y)
+
     except: 
         a=True
         print("There is a vertical asymptote in this function!")
