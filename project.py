@@ -51,12 +51,12 @@ for r in xcoordlist:
         y=eval(Locfunction)
         ycoordlist.append(y)
     except: 
-        if: 
+        print("There is an asymptote in this function!")
 
 #print(ycoordlist)
 
-
-ycoordlist1=[]                              #This will find the y+.001 value for the symmetric difference quotient. 
+                                             #This will find the y+.001 value for the symmetric difference quotient.
+ycoordlist1=[]                              
 for r in xcoordlist:
     x=r+0.001
     Locfunction=function.lower()
