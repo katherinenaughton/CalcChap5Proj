@@ -46,7 +46,8 @@ for r in xcoordlist:
 
     except: 
         a=True
-        print("There is a vertical asymptote in this function!")
+        asymptote=r
+        print("There is a vertical asymptote at x=", asymptote, " in this function!")
 
 #print(ycoordlist)
 
