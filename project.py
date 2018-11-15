@@ -109,7 +109,9 @@ lengthdecreasing=len(decreasinglist)
  
 #work on the print statements above to make it work when it changes from increasing to decreasing more than once
 
-                                            #This creates a list of the second derivatives. 
+                                                    # This creates list of the y+0.001 and y-0.001 values to use
+                                                        # in the symmetric differnce quotient to find the 
+                                                            #second derivatives. 
 #second derivatives
 y2coordlist1=[]
 for d in derivlist:
@@ -121,16 +123,20 @@ for d in derivlist:
 
 interval2num=len(y2coordlist1)
 #print(interval2num)
-
+                                                    #This creates a list of the rounded second derivatives.
 deriv2list=[]
 for i in range(interval2num):
     deriv2  = ((y2coordlist1[i])-(y2coordlist2[i]))/(2*0.001)
     deriv2list.append(round(deriv2,2))
 #print (deriv2list)
-
+                                                    #This creates a list with the x and y coordinates, 
+                                                        #first derivatives and second derivatives. 
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
 #print(xyderiv2zip)
 
+                                                    #These loops check to see where the second derivative is zero,
+                                                        #positive or negative in order to determine POI and concave
+                                                            #up and down intervals. 
 # points of inflection
 poilist=[]
 concaveuplist=[]
@@ -166,17 +172,17 @@ lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[-1])
 
                                     #This is the code for the graphs of the function and derivative.
-                                    #Defines Colors
+                                    #This defines the colors.
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
 black = Color(0x000000, 1.0)
 purple = Color(0x800080, 1.0)
 purple2 = Color(0x9932CC, 1.0)
-                                    #Defines the points that will plot the graph.
+                                    #This defines the points that will plot the function graph.
 thinline = LineStyle(1, black)
 points = CircleAsset(5, thinline, blue)
-                                    #Defines coordinates to graph the original function and graph it. 
+                                    #This defines the coordinates to graph the original function. 
 graphycoords=[y*-1 for y in ycoordlist]
 print(graphycoords)
 xcoords = xcoordlist
@@ -184,17 +190,19 @@ ycoords= graphycoords
 
 #print(xcoordlist)
 #print(ycoordlist)
-
+                                    #This graphs the function. 
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
     Sprite(points, ((25*(i[0]+20),(25*(i[1]+10)))))
 
-                                    #Defines coordinates to graph the original function and graph it.
+                                    #This defines the points that will plot the graph.
 points = CircleAsset(5, thinline, purple)
+                                     #This defines the coordinates to graph the derivative.
 graphy2coords=[y*-1 for y in derivlist]
 x2coords = xcoordlist
 y2coords = graphy2coords
 xy2coords=list(zip(x2coords,y2coords))
+                                     #This graphs the derivative.
 for i in xy2coords: 
     Sprite(points, ((25*(i[0]+20)),(25*(i[1]+10))))
 
