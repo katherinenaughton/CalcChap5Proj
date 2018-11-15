@@ -188,7 +188,7 @@ ycoords= graphycoords
 
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
-    Sprite(points, ((50*(i[0]+2)),(50*(i[1]+2))))
+    Sprite(points, ((25*(i[0]+20),(25*(i[1]+10)))))
 
                                     #Defines coordinates to graph the original function and graph it.
 points = CircleAsset(5, thinline, purple)
@@ -197,7 +197,7 @@ x2coords = xcoordlist
 y2coords = graphy2coords
 xy2coords=list(zip(x2coords,y2coords))
 for i in xy2coords: 
-    Sprite(points, ((50*(i[0]+2)),(50*(i[1]+2))))
+    Sprite(points, ((25*(i[0]+20)),(25*(i[1]+10))))
 
 myapp = App()
 myapp.run()
