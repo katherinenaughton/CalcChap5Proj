@@ -20,13 +20,15 @@ function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
 
+try:
+    print(code with error)
+except:
+    print (you messed up)
+        
+
 
 #print(function)
-'''
-if log10 or log or log2 in function:
-    if x1<0:
-        x1=0
-'''
+
 xcoordlist=[]                               #This prints a list of the x values. 
 for i in range(x1,x2+1):
     if i == x2:
@@ -42,8 +44,12 @@ ycoordlist=[]                               #This prints a list of the y values.
 for r in xcoordlist:
     x=r
     Locfunction=function.lower()
-    y=eval(Locfunction)
-    ycoordlist.append(y)
+    try:
+        y=eval(Locfunction)
+        ycoordlist.append(y)
+    except: 
+        if: 
+
 #print(ycoordlist)
 
 
