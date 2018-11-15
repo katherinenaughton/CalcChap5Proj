@@ -7,13 +7,15 @@ have figure out how to tell if extrema is abs/local or max/min
 have to figure our when decreasing or increasing interval is a union
 deals with logs 1/x graphs
 '''
+
+                                            #This is where we import the functions from the math library. 
 from math import sin, cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
 from math import log, log10, sqrt, log2
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
 
-                                            #inputs
+                                            #This is where the user inputs the function and intervals. 
 function=input("What function would you like to analyze? ")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
@@ -25,7 +27,7 @@ if log10 or log or log2 in function:
     if x1<0:
         x1=0
 '''
-xcoordlist=[]                               #x values
+xcoordlist=[]                               #This prints a list of the x values. 
 for i in range(x1,x2+1):
     if i == x2:
         xcoordlist.append(i+.0)
@@ -36,7 +38,7 @@ for i in range(x1,x2+1):
 #print(xcoordlist)
     
 
-ycoordlist=[]                               # y values
+ycoordlist=[]                               #This prints a list of the y values. 
 for r in xcoordlist:
     x=r
     Locfunction=function.lower()
@@ -45,7 +47,7 @@ for r in xcoordlist:
 #print(ycoordlist)
 
 
-ycoordlist1=[]                              #this will find the a+.001 for the dq
+ycoordlist1=[]                              #This will find the y+.001 value for the symmetric difference quotient. 
 for r in xcoordlist:
     x=r+0.001
     Locfunction=function.lower()
@@ -54,7 +56,7 @@ for r in xcoordlist:
 #print(ycoordlist1)
 
 
-ycoordlist2=[]                              #this will find the a+.001 for the sdq
+ycoordlist2=[]                              #This will find the y-.001 value for the symmetric differnce quotient. 
 for r in xcoordlist:
     x=r-0.001
     Locfunction=function.lower()
@@ -63,26 +65,26 @@ for r in xcoordlist:
 #print(ycoordlist2)
 
 
-intervalnum=len(ycoordlist1)                #this tells us how long our cordinate lists are 
-#print(intervalnum)                              #so we know how long to run the loop
+intervalnum=len(ycoordlist1)                #This tells us how long our cordinate lists are 
+#print(intervalnum)                            #so we know how long to run the loop. 
 
 
-derivlist=[]                                #here we will make a list of the derivatives
-derivlist1=[]
+derivlist=[]                                #This makes a list of the derivatives, and a rounded list
+derivlist1=[]                                   #of the derivatives. 
 for s in range(intervalnum):
     deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.001)
     derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
 #print (derivlist1)
 
-
-#deriv/x value/y value zip
+                                            #This makes a list of the x and y coordinates, and the list of 
+#deriv/x value/y value zip                      #corresponding derivatives. 
 xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist1))
 #print(xyderivzip)
 
 
-extremalist=[]                              #here we find where d1 = 0
-increasinglist=[]                           #here we find the interval where it inc/dec
+extremalist=[]                              #This finds where the derivative equals zero, and also
+increasinglist=[]                           #where the function is increasing and decreasing. 
 decreasinglist=[]
 for d in xyderivzip:
     if d[2]==0:
@@ -107,6 +109,7 @@ lengthdecreasing=len(decreasinglist)
  
 #work on the print statements above to make it work when it changes from increasing to decreasing more than once
 
+                                            #This creates a list of the second derivatives. 
 #second derivatives
 y2coordlist1=[]
 for d in derivlist:
