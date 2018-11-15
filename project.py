@@ -21,15 +21,7 @@ print("If you chose a log function, make sure your interval is within the domain
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
 
-'''
-try:
-    print(code with error)
-except:
-    print (you messed up)
-'''
         
-
-
 #print(function)
 
 xcoordlist=[]                               #This prints a list of the x values. 
@@ -42,7 +34,7 @@ for i in range(x1,x2+1):
             xcoordlist.append(i+m)
 #print(xcoordlist)
     
-
+a=False
 ycoordlist=[]                               #This prints a list of the y values. 
 for r in xcoordlist:
     x=r
@@ -51,7 +43,8 @@ for r in xcoordlist:
         y=eval(Locfunction)
         ycoordlist.append(y)
     except: 
-        print("There is an asymptote in this function!")
+        a=True
+        print("There is a vertical asymptote in this function!")
 
 #print(ycoordlist)
 
@@ -157,9 +150,11 @@ for d in xyderiv2zip:
         concaveuplist.append(d[0])
     elif d[3]<=0:
         concavedownlist.append(d[0])
-#print (poilist)
-#print (concaveuplist)
-#print (concavedownlist)
+    #if a:
+        
+print (poilist)
+print (concaveuplist)
+print (concavedownlist)
 
 # concave up interval(s)
 concaveuplist=[]
