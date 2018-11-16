@@ -76,7 +76,7 @@ for s in range(intervalnum):
     deriv  = ((ycoordlist1[s])-(ycoordlist2[s]))/(2*0.001)
     derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
-#print (derivlist1)
+print (derivlist1)
 
                                             #This makes a list of the x and y coordinates, and the list of 
 #deriv/x value/y value zip                      #corresponding derivatives. 
@@ -197,7 +197,7 @@ else:
 #second derivatives
 y2coordlist1=[]
 for d in derivlist:
-    y2coordlist1.append(d+0.001)
+    y2coordlist1.append(d+0.0 01)
     
 y2coordlist2=[]
 for d in derivlist:
@@ -207,10 +207,10 @@ interval2num=len(y2coordlist1)
 #print(interval2num)
                                                     #This creates a list of the rounded second derivatives.
 deriv2list=[]
-for i in range(interval2num):
-    deriv2  = ((y2coordlist1[i])-(y2coordlist2[i]))/(2*0.001)
+for i in derivlist:
+    deriv2  = ([i]+0.001)-([i]-0.01))/(2*0.001)
     deriv2list.append(round(deriv2,2))
-#print (deriv2list)
+print (deriv2list)
                                                     #This creates a list with the x and y coordinates, 
                                                         #first derivatives and second derivatives. 
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
@@ -268,12 +268,12 @@ thinline = LineStyle(1, black)
 points = CircleAsset(5, thinline, blue)
                                     #This defines the coordinates to graph the original function. 
 graphycoords=[y*-1 for y in ycoordlist]
-print(graphycoords)
+#print(graphycoords)
 xcoords = xcoordlist
 ycoords= graphycoords
 
-print(xcoordlist)
-print(ycoordlist)
+#print(xcoordlist)
+#print(ycoordlist)
                                     #This graphs the function. 
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
