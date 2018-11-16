@@ -218,6 +218,8 @@ xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
                                                     #These loops check to see where the second derivative is zero,
                                                         #positive or negative in order to determine POI and concave
                                                             #up and down intervals. 
+
+
 # points of inflection
 poilist=[]
 concaveuplist=[]
@@ -229,35 +231,28 @@ for d in xyderiv2zip:
         concaveuplist.append(d[0])
     elif d[3]<=0:
         concavedownlist.append(d[0])
-        
-if a: 
+    if a: 
     print("There is a ALSO a point of inflection at x=", asymptote, ".")
-    
-    
-    
-        
 print (poilist)
 print (concaveuplist)
 print (concavedownlist)
-
 # concave up interval(s)
 concaveuplist=[]
 for d in xyderiv2zip:
     if d[3]>=0:
         concaveuplist.append(d[0])
-#print (concaveuplist)
+print (concaveuplist)
 lengthconcaveup=len(concaveuplist)
-#print(lengthconcaveup)
-#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[-1])
-
+print(lengthconcaveup)
+#print('Your function is concave up from' concaveuplist[0] 'to' concaveuplist[lengthconcaveup])
 #concave down interval(s)
 concavedownlist=[]
 for d in xyderiv2zip:
     if d[3]<=0:
         concavedownlist.append(d[0])
-#print (concavedownlist)
+print (concavedownlist)
 lengthconcavedown=len(concavedownlist)
-#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[-1])
+#print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
 
                                     #This is the code for the graphs of the function and derivative.
                                     #This defines the colors.
