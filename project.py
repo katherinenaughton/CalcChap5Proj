@@ -232,7 +232,7 @@ for d in xyderiv2zip:
     elif d[3]<=0:
         concavedownlist.append(d[0])
     if a: 
-    print("There is a ALSO a point of inflection at x=", asymptote, ".")
+        print("There is a ALSO a point of inflection at x=", asymptote, ".")
 print (poilist)
 print (concaveuplist)
 print (concavedownlist)
