@@ -12,7 +12,7 @@ from ggame import CircleAsset
 
                                             #This is where the user inputs the function and intervals. 
 function=input("What function would you like to analyze? ")
-print("If you chose a log function, make sure your interval is within the domain :)")
+print("If you choose a log function, make sure your interval is within the domain :)")
 x1=int(input("Where do you want your interval to start (x value)? "))
 x2=int(input("Where do you want your interval to end (x value)? "))
 
@@ -45,6 +45,7 @@ for r in xcoordlist:
         print("There is a vertical asymptote at x=", asymptote, " in this function!")
 
 #print(ycoordlist)
+
 
                                              #This will find the y+.001 value for the symmetric difference quotient.
 ycoordlist1=[]                              
@@ -82,7 +83,7 @@ for s in range(intervalnum):
 xyderivzip=list(zip(xcoordlist, ycoordlist, derivlist1))
 #print(xyderivzip)
 
-
+'''
 extremalist=[]                              #here we find where d1 = 0
 increasinglist=[]                           #here we find the interval where it inc/dec
 decreasinglist=[]
@@ -188,7 +189,7 @@ else:
         m = decstart.index(d)
         print(d,"to",decend[m])    
 
-    
+'''   
 
                                                     # This creates list of the y+0.001 and y-0.001 values to use
                                                         # in the symmetric differnce quotient to find the 
@@ -218,7 +219,7 @@ xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
                                                     #These loops check to see where the second derivative is zero,
                                                         #positive or negative in order to determine POI and concave
                                                             #up and down intervals. 
-
+'''
 
 # points of inflection
 poilist=[]
@@ -255,7 +256,7 @@ lengthconcavedown=len(concavedownlist)
 #print('Your function is concavedown from' concavedownlist[0] 'to' concavedownlist[lengthconcavedown])
 
                                     #This is the code for the graphs of the function and derivative.
-                                    #This defines the colors.
+'''                                 #This defines the colors.
 red = Color(0xff0000, 1.0)
 green = Color(0x00ff00, 1.0)
 blue = Color(0x0000ff, 1.0)
@@ -271,8 +272,8 @@ print(graphycoords)
 xcoords = xcoordlist
 ycoords= graphycoords
 
-#print(xcoordlist)
-#print(ycoordlist)
+print(xcoordlist)
+print(ycoordlist)
                                     #This graphs the function. 
 xycoords=list(zip(xcoords,ycoords))
 for i in xycoords: 
