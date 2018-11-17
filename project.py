@@ -221,7 +221,7 @@ derivlista=[]                                #This makes a list of the derivativ
 derivlista1=[]                                   #of the derivatives. 
 for s in range(intervalnum):
     deriva  = ((ycoordlist1[s]+0.001)-(ycoordlist1[s]-0.001))/(2*0.001)
-    derivlista1.append(round(deriva,2))
+    #derivlista1.append(round(deriva,2))
     derivlista.append(deriva)
 #print (derivlista1)
 print (derivlista)
@@ -230,7 +230,7 @@ derivlistb=[]                                #This makes a list of the derivativ
 derivlistb1=[]                                   #of the derivatives. 
 for s in range(intervalnum):
     derivb  = ((ycoordlist2[s]+0.001)-(ycoordlist2[s]-0.001))/(2*0.001)
-    derivlistb1.append(round(derivb,2))
+    #derivlistb1.append(round(derivb,2))
     derivlistb.append(derivb)
 #print (derivlistb1)
 print (derivlistb)
@@ -242,7 +242,7 @@ for s in range(intervalnum):
     deriv2list1.append(round(deriv2,2))
     deriv2list.append(deriv2)
 #print(deriv2list1)
-print (deriv2list)
+#print (deriv2list)
 
                                                     #This creates a list with the x and y coordinates, 
                                                         #first derivatives and second derivatives. 
