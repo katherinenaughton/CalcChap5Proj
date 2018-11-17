@@ -234,13 +234,14 @@ for d in derivlist:
 y2coordlist2=[]
 for d in derivlist:
     y2coordlist2.append(d-0.001)
-'''
+
 
 
 y2coordlist1=[(x+0.001) for x in derivlist1]
 print(y2coordlist1)
 y2coordlist2=[(x-0.001) for x in derivlist1]
 print(y2coordlist2)
+'''
 
 interval2num=len(y2coordlist1)
 print(interval2num)        
@@ -248,8 +249,8 @@ print(interval2num)
 
 deriv2list=[]
 for s in range(interval2num):
-    deriv2  = ((y2coordlist1[s])-(y2coordlist2[s]))/(2*0.001)
-    #deriv2list.append(round(deriv2,2))
+    deriv2  = ((derivlista1[s])-(derivlistb1[s]))/(2*0.001)
+    deriv2list.append(round(deriv2,2))
     deriv2list.append(deriv2)
 print (deriv2list)
                                                     #This creates a list with the x and y coordinates, 
