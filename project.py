@@ -1,3 +1,4 @@
+
 '''
 project.py
 Katie Naughton and Ella Edmonds
@@ -28,6 +29,8 @@ for i in range(x1,x2+1):
             #print(i+m)
             xcoordlist.append(i+m)
 #print(xcoordlist)
+
+
     
 a=False
 ycoordlist=[]                               #This prints a list of the y values. 
@@ -44,7 +47,7 @@ for r in xcoordlist:
         asymptote=r
         print("There is a vertical asymptote at x=", asymptote, " in this function!")
 
-#print(ycoordlist)
+print(ycoordlist)
 
 
                                              #This will find the y+.001 value for the symmetric difference quotient.
@@ -77,6 +80,34 @@ for s in range(intervalnum):
     derivlist1.append(round(deriv,2))
     derivlist.append(deriv)
 print (derivlist1)
+print (derivlist)
+
+xcoordlista=[(x+0.001) for x in xcoordlist]
+print(xcoordlista)
+xcoordlistb=[(x-0.001) for x in xcoordlist]
+print(xcoordlistb)
+
+derivlista=[]                                #This makes a list of the derivatives, and a rounded list
+derivlista1=[]                                   #of the derivatives. 
+for s in range(intervalnum):
+    deriva  = ((xcoordlista[s]+0.001)-xycoordlista[s]-0.001))/(2*0.001)
+    derivlista1.append(round(deriva,2))
+    derivlista.append(deriva)
+print (derivlista1)
+print (derivlista)
+
+derivlistb=[]                                #This makes a list of the derivatives, and a rounded list
+derivlistb1=[]                                   #of the derivatives. 
+for s in range(intervalnum):
+    derivb  = ((xcoordlistb[s]+0.001)-(xcoordlistb[s]-0.001))/(2*0.001)
+    derivlistb1.append(round(derivb,2))
+    derivlistb.append(derivb)
+print (derivlistb1)
+print (derivlistb)
+
+
+
+
 
                                             #This makes a list of the x and y coordinates, and the list of 
 #deriv/x value/y value zip                      #corresponding derivatives. 
@@ -195,21 +226,31 @@ else:
                                                         # in the symmetric differnce quotient to find the 
                                                             #second derivatives. 
 #second derivatives
+'''
 y2coordlist1=[]
 for d in derivlist:
-    y2coordlist1.append(d+0.0 01)
+    y2coordlist1.append(d+0.001)
     
 y2coordlist2=[]
 for d in derivlist:
     y2coordlist2.append(d-0.001)
+'''
+
+
+y2coordlist1=[(x+0.001) for x in derivlist1]
+print(y2coordlist1)
+y2coordlist2=[(x-0.001) for x in derivlist1]
+print(y2coordlist2)
 
 interval2num=len(y2coordlist1)
-#print(interval2num)
-                                                    #This creates a list of the rounded second derivatives.
+print(interval2num)        
+
+
 deriv2list=[]
-for i in derivlist:
-    deriv2  = ([i]+0.001)-([i]-0.01))/(2*0.001)
-    deriv2list.append(round(deriv2,2))
+for s in range(interval2num):
+    deriv2  = ((y2coordlist1[s])-(y2coordlist2[s]))/(2*0.001)
+    #deriv2list.append(round(deriv2,2))
+    deriv2list.append(deriv2)
 print (deriv2list)
                                                     #This creates a list with the x and y coordinates, 
                                                         #first derivatives and second derivatives. 
@@ -292,7 +333,3 @@ for i in xy2coords:
 
 myapp = App()
 myapp.run()
-
-
-    
-    
