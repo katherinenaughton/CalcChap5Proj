@@ -304,6 +304,9 @@ for d in xyderiv2zip:
 if len(poi) == 2:
     print("There is no point of inflection")
 
+if a:
+    print("There is also a point of inflection at x=", asymptote, ".")
+
 print()
 
 ccustart = []
