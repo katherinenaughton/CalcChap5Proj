@@ -248,6 +248,9 @@ for s in range(intervalnum):
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
 #print(xyderiv2zip)
 
+if a:
+    print("There is also a point of inflection at x=", asymptote, ".")
+
 
 poilist = []                              #here we find where d2 = 0
 cculist = []                           #here we store the interval where it ccu/ccd
@@ -303,9 +306,7 @@ for d in xyderiv2zip:
 #print(poi)
 if len(poi) == 2:
     print("There is no point of inflection")
-
-if a:
-    print("There is also a point of inflection at x=", asymptote, ".")
+    
 
 print()
 
