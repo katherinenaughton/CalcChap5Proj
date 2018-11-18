@@ -12,7 +12,7 @@ from ggame import CircleAsset
 
 #inputs
 function=input("What function would you like to analyze? ")
-print("If you choose a log function, make sure your interval is within the domain :)")
+print("If you chose a log or sqrt function, please make sure your interval is within the domain :)")
 x1=int(input("Where do you want your interval to start? "))
 x2=int(input("Where do you want your interval to end? "))
 
