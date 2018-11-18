@@ -318,14 +318,14 @@ xy2coords=list(zip(x2coords,y2coords))
 for i in xy2coords: 
     Sprite(points, ((25*(i[0]+20)),(25*(i[1]+10))))
     
-points = CircleAsset(5, thinline, purple)
+points = CircleAsset(5, thinline, red)
                                      #This defines the coordinates to graph the derivative.
 graphy3coords=[y*-1 for y in deriv2list]
-x2coords = xcoordlist
-y2coords = graphy2coords
-xy2coords=list(zip(x2coords,y2coords))
+x3coords = xcoordlist
+y3coords = graphy3coords
+xy3coords=list(zip(x3coords,y3coords))
                                      #This graphs the derivative.
-for i in xy2coords: 
+for i in xy3coords: 
     Sprite(points, ((25*(i[0]+20)),(25*(i[1]+10))))
 
 myapp = App()
