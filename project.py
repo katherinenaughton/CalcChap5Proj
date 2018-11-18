@@ -42,7 +42,8 @@ for r in xcoordlist:
     except: 
         a=True
         asymptote=r
-        print("There is a vertical asymptote at x=", asymptote, " in this function!")
+        print("There is a vertical asymptote and point of inflection at x=", asymptote, " in this function!")
+    
 
 
 ycoordlist1=[]                              #this will find the a+.001 for the dq
@@ -247,9 +248,6 @@ for s in range(intervalnum):
 
 xyderiv2zip=list(zip(xcoordlist, ycoordlist, derivlist, deriv2list))
 #print(xyderiv2zip)
-
-if a:
-    print("There is also a point of inflection at x=", asymptote, ".")
 
 
 poilist = []                              #here we find where d2 = 0
