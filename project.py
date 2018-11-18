@@ -233,53 +233,11 @@ for s in range(intervalnum):
     deriv2list.append(deriv2)
 #print (deriv2list)
 print(deriv2list1)
-'''
-y2coordlist1=[]
-for d in derivlist:
-    y2coordlist1.append(d+0.001)
-    
-y2coordlist2=[]
-for d in derivlist:
-    y2coordlist2.append(d-0.001)
 
 
 
-y2coordlist1=[(x+0.001) for x in derivlist1]
-print(y2coordlist1)
-y2coordlist2=[(x-0.001) for x in derivlist1]
-print(y2coordlist2)
-'''
-xcoordlista=[(x+0.001) for x in xcoordlist]
-#print(xcoordlista)
-xcoordlistb=[(x-0.001) for x in xcoordlist]
-#print(xcoordlistb)
 
-derivlista=[]                                #This makes a list of the derivatives, and a rounded list
-derivlista1=[]                                   #of the derivatives. 
-for s in range(intervalnum):
-    deriva  = ((ycoordlist1[s]+0.001)-(ycoordlist1[s]-0.001))/(2*0.001)
-    #derivlista1.append(round(deriva,2))
-    derivlista.append(deriva)
-#print (derivlista1)
-print (derivlista)
 
-derivlistb=[]                                #This makes a list of the derivatives, and a rounded list
-derivlistb1=[]                                   #of the derivatives. 
-for s in range(intervalnum):
-    derivb  = ((ycoordlist2[s]+0.001)-(ycoordlist2[s]-0.001))/(2*0.001)
-    #derivlistb1.append(round(derivb,2))
-    derivlistb.append(derivb)
-#print (derivlistb1)
-print (derivlistb)
-    
-deriv2list=[]
-deriv2list1=[]
-for s in range(intervalnum):
-    deriv2  = ((derivlista[s])-(derivlistb[s]))/(2*0.001)
-    deriv2list1.append(round(deriv2,2))
-    deriv2list.append(deriv2)
-#print(deriv2list1)
-#print (deriv2list)
 
                                                     #This creates a list with the x and y coordinates, 
                                                         #first derivatives and second derivatives. 
