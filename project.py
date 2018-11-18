@@ -196,6 +196,43 @@ else:
                                                         # in the symmetric differnce quotient to find the 
                                                             #second derivatives. 
 #second derivatives
+ycoordlista=[]                              
+for r in xcoordlist:
+    x=r+0.002
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlista.append(y)
+#print(ycoordlista)
+
+ycoordlistb=[]                              #This will find the y-.001 value for the symmetric differnce quotient. 
+for r in xcoordlist:
+    x=r-0.002
+    Locfunction=function.lower()
+    y=eval(Locfunction)
+    ycoordlistb.append(y)
+#print(ycoordlistb)
+
+derivlista=[]                                #This makes a list of the derivatives, and a rounded list                                 #of the derivatives. 
+for s in range(intervalnum):
+    deriva  = ((ycoordlista[s])-(ycoordlist[s]))/(2*0.001)
+    derivlista.append(deriva)
+#print (derivlista)
+
+derivlistb=[]                                #This makes a list of the derivatives, and a rounded list                                 #of the derivatives. 
+for s in range(intervalnum):
+    derivb  = ((ycoordlist[s])-(ycoordlistb[s]))/(2*0.001)
+    derivlistb.append(derivb)
+#print (derivlistb)
+
+    
+deriv2list=[]
+deriv2list1=[]
+for s in range(intervalnum):
+    deriv2  = ((derivlista[s])-(derivlistb[s]))/(2*0.001)
+    deriv2list1.append(round(deriv2,2))
+    deriv2list.append(deriv2)
+#print (deriv2list)
+print(deriv2list1)
 '''
 y2coordlist1=[]
 for d in derivlist:
@@ -316,6 +353,16 @@ for i in xycoords:
 points = CircleAsset(5, thinline, purple)
                                      #This defines the coordinates to graph the derivative.
 graphy2coords=[y*-1 for y in derivlist]
+x2coords = xcoordlist
+y2coords = graphy2coords
+xy2coords=list(zip(x2coords,y2coords))
+                                     #This graphs the derivative.
+for i in xy2coords: 
+    Sprite(points, ((25*(i[0]+20)),(25*(i[1]+10))))
+    
+points = CircleAsset(5, thinline, purple)
+                                     #This defines the coordinates to graph the derivative.
+graphy3coords=[y*-1 for y in deriv2list]
 x2coords = xcoordlist
 y2coords = graphy2coords
 xy2coords=list(zip(x2coords,y2coords))
