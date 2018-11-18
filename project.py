@@ -2,14 +2,7 @@
 '''
 project.py
 Katie Naughton and Ella Edmonds
-eval, with x predefined
-def square(x):
-    return x*x
-    result=square(5)
-print(square(5))
-TO DO: 
-have figure out how to tell if extrema is abs/local or max/min
-have to figure our when decreasing or increasing interval is a union
+
 '''
 from math import sin, cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
